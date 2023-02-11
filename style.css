@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+a {text-decoration: none; transition: 0.6s; color: #E9FB00;}
+a:hover {text-decoration: none; transition: 0.2s; transform: scale(1.2);}
+a:active {text-decoration: none;}
+
+
+
 #bo{
     margin: 0px;
     background-image: url('pattern.png');
     background-size: 20%;  
-    color: #000;
+    color: #E9FB00;
 }
 h2{
     font-size: 70px;
@@ -48,56 +56,88 @@ p{font-size:30px;}
     
 .naz{
     border-radius: 20px;
-    background-color: #FF1D69;
+    background-color: #AF3BD4;
     font-size: 50px;
     text-align: center;
     margin:50px 500px;
     padding: 10px 0;
-    transition: 0.7s;
+    transition: 1s;
 }
 .naz:hover{
     border-radius: 10px;
-    transition: 2s;
+    transition: 0.7s;
     margin:50px 400px;
     padding: 15px 5;
+    background-color: #EE51B1;
+    
 }
 
-a {text-decoration: none; color: #1dfe94;}
-a:hover {text-decoration: none; color: #1dfe94;}
-a:active {text-decoration: none; color: #85A6BD;}
+
+.block{
+    border-radius: 20px;
+    background-color: #AF3BD4;
+    font-size: 50px;
+    text-align: center;
+    margin:50px 50px;
+    padding: 10px 0;
+    transition: 0.5s;
+}
+
+.block:hover{
+    background-color: #EE51B1;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 
 header{
     display: flex;
     justify-content:space-between;
     border-radius: 20px;
-    background-color: #FF1D69;
+    background-color: #AF3BD4;
     font-size: 50px;
     text-align: center;
     margin:20px 50px;
     padding: 10px 0;
-    transition: 0.7s;
+    transition: 1s;
 }
 
 header:hover{
     
-    border-radius: 20px;
-    background-color: #FF1D69;
-    font-size: 50px;
-    text-align: center;
+    border-radius: 10px;
+    
+    
     margin:20px 20px;
-    padding: 10px 0;
+    padding: 15px 0;
     transition: 3s;
 }
 
 .logo{
     width: 150px;
-    margin-right: 14%
+    margin-right: 170px;
+    border-radius: 50px;
 }
+
+
 .shapka{
     margin:auto;
 }
 
-.ceshap{}
+.ceshap{
+    font-size: 70px;
+}
 
-.komshap{}
+.komshap{
+    font-size: 30px;
+    transition: 0.6;
+}
+.komshap.hover{
+    font-size: 35px;
+    transition: 0.2;
+}
+
+.table_index{
+    margin:50px 500px;
+}
+
 
