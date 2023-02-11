@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+#bo{
+    margin: 0px;
+    background-image: url('pattern.png');
+    background-size: 20%;  
+    color: #000;
+}
+h2{
+    font-size: 70px;
+    padding: 10px;
+    margin: 20px 40px;
+}
+h1{
+    margin: 20px 7%;
+    font-size: 100px;
+}
+
+td{
+    padding: 10px 10px;
+    width: 220px;
+    text-align: center;
+    margin: 0;
+    border-collapse:collapse;
+    }
+#list{
+    background-image: url(https://i.pinimg.com/originals/24/22/32/24223276aba1bd1f91190a745023e469.gif);
+    margin: 30px auto;
+    padding: 40px 5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    color: #000;
+    background-size: cover;
+    
+}
+
+.head{
+    color: black;
+    font-size: 40px;
+    }
+    
+.chet{
+    background: #1b0924a2;
+    color: #FCFFD9;
+    border: 22px solid #7309AA ;
+    }
+    
+p{font-size:30px;}
+    
+.naz{
+    border-radius: 20px;
+    background-color: #FF1D69;
+    font-size: 50px;
+    text-align: center;
+    margin:50px 500px;
+    padding: 10px 0;
+    transition: 0.7s;
+}
+.naz:hover{
+    border-radius: 10px;
+    transition: 2s;
+    margin:50px 400px;
+    padding: 15px 5;
+}
+
+a {text-decoration: none; color: #1dfe94;}
+a:hover {text-decoration: none; color: #1dfe94;}
+a:active {text-decoration: none; color: #85A6BD;}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    border-radius: 20px;
+    background-color: #FF1D69;
+    font-size: 50px;
+    text-align: center;
+    margin:20px 50px;
+    padding: 10px 0;
+    transition: 0.7s;
+}
+
+header:hover{
+    
+    border-radius: 20px;
+    background-color: #FF1D69;
+    font-size: 50px;
+    text-align: center;
+    margin:20px 20px;
+    padding: 10px 0;
+    transition: 3s;
+}
+
+.logo{
+    width: 150px;
+    margin-right: 14%
+}
+.shapka{
+    margin:auto;
+}
+
+.ceshap{}
+
+.komshap{}
+
