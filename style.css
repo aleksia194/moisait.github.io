@@ -74,12 +74,13 @@ p{font-size:30px;}
 
 
 .block{
+    display: block;
     border-radius: 20px;
     background-color: #AF3BD4;
     font-size: 50px;
     text-align: center;
-    margin:50px 50px;
-    padding: 10px 0;
+    margin:50px auto;
+    padding: 10px 10px;
     transition: 0.5s;
 }
 
