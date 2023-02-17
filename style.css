@@ -8,19 +8,22 @@ a:active {text-decoration: none;}
 
 
 #bo{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     background-image: url('pattern.png');
     background-size: 20%;  
     color: #E9FB00;
 }
 h2{
-    font-size: 70px;
+    font-size: 0.8em;
     padding: 10px;
     margin: 20px 40px;
 }
 h1{
-    margin: 20px 7%;
-    font-size: 100px;
+    margin: 2% 7%;
+    font-size: 2em;
 }
 
 td{
@@ -52,22 +55,21 @@ td{
     border: 22px solid #7309AA ;
     }
     
-p{font-size:30px;}
+p{font-size:0.6em;}
     
 .naz{
     border-radius: 20px;
     background-color: #AF3BD4;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
-    margin:50px 500px;
+    margin:5% 30%;
     padding: 10px 0;
     transition: 1s;
 }
 .naz:hover{
     border-radius: 10px;
     transition: 0.7s;
-    margin:50px 400px;
-    padding: 15px 5;
+    transform: scale(1.1);
     background-color: #EE51B1;
     
 }
@@ -75,11 +77,11 @@ p{font-size:30px;}
 
 .block{
     display: block;
-    border-radius: 20px;
+    border-radius: 1vw;
     background-color: #AF3BD4;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
-    margin:50px auto;
+    margin:5% auto;
     padding: 10px 10px;
     transition: 0.5s;
 }
@@ -94,30 +96,16 @@ p{font-size:30px;}
 header{
     display: flex;
     justify-content:space-between;
-    border-radius: 20px;
+    border-radius: 0vh 0vh 3vh 3vh;
     background-color: #AF3BD4;
-    font-size: 50px;
+    font-size: 200%;
     text-align: center;
-    margin:20px 50px;
+    margin:0 1em;
     padding: 10px 0;
     transition: 1s;
 }
 
-header:hover{
-    
-    border-radius: 10px;
-    
-    
-    margin:20px 20px;
-    padding: 15px 0;
-    transition: 3s;
-}
 
-.logo{
-    width: 150px;
-    margin-right: 170px;
-    border-radius: 50px;
-}
 
 
 .shapka{
@@ -125,20 +113,35 @@ header:hover{
 }
 
 .ceshap{
-    font-size: 70px;
+    font-size: 2em;
 }
 
 .komshap{
-    font-size: 30px;
+    font-size: 1em;
     transition: 0.6;
+    transition: 0.6s;
 }
-.komshap.hover{
-    font-size: 35px;
-    transition: 0.2;
+.komshap:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+
+main {
+    flex: auto;
+    flex-direction: column;
+}
+  
+  footer {
+      flex-shrink: 0;
+}
+
+.logo{
+    width: 15vh;
+    margin-right: 20%;
+    border-radius: 50px;
 }
 
 .table_index{
-    margin:50px 500px;
+    margin:5% 30%;
 }
-
-
