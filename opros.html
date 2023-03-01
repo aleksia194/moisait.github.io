@@ -1,0 +1,85 @@
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TG.gif" type="image/gif">
+    <link rel="shortcut icon" href="TG.gif" type="image/gif">
+
+    <title>школьный сайт</title>
+</head>
+<body id="bo">
+    <header> 
+        <a style="margin-right: 20%;" href="index.html"><img class="logo" src="TG.gif" alt="лого"></a>
+        <div class="shapka ceshap">школьный сайт</div>
+        <div class="shapka komshap"><a href="coments.html">комментарии</a></div>  
+    </header>   
+    <main>
+        <div class="block">Выполните задания теста:</div>
+        <div class="block">Какой тег используется для программирования внутри HTML файла?
+            <input type="text" id="z_1">
+        </div>
+
+        <div class="block">Какой тег используется для подключения стилей из внешнего файла?
+            <input type="text" id="z_2">
+        </div>
+
+        <div class="block">Какой тег используется для coздания таблицы?
+            <input type="text" id="z_3">
+        </div>
+
+        <div class="block">Какой тег используется для формирования кнопки?
+            <input type="text" id="z_4">
+        </div>
+
+        <div class="block">Какой тег используется для того что бы создать форму?
+            <input type="text" id="z_5">
+        </div>
+
+        <div class="block">Какой самый основной тег?
+            <input type="text" id="z_6">
+        </div>
+        
+        <button class="block" onclick="proverit();">Проверить</button>
+        <div class="block" id="rezultat"></div>
+        <script>
+            function proverit(){
+                otv1 = "script";
+                otv2 = "link";
+                otv3 = "table";
+                otv4 = "button";
+                otv5 = "input";
+                otv6 = "html";
+
+                z1 = document.getElementById('z_1').value;
+                z2 = document.getElementById('z_2').value;
+                z3 = document.getElementById('z_3').value;
+                z4 = document.getElementById('z_4').value;
+                z5 = document.getElementById('z_5').value;
+                z6 = document.getElementById('z_6').value;
+                ball=0;
+
+                if(z1 == otv1){ball += 1;};
+                if(z2 == otv2){ball += 1;};
+                if(z3 == otv3){ball += 1;};
+                if(z4 == otv4){ball += 1;};
+                if(z5 == otv5){ball += 1;};
+                if(z6 == otv6){ball += 2;};
+                
+                vsego_zadach=7;
+
+
+                procent = ball / vsego_zadach * 100;
+
+                document.getElementById('rezultat').innerHTML="Задания выполненны верно на "+ Math.round(procent) +"%.";
+            }
+        </script>
+
+
+
+
+    </main>
+</body>
+</html>
