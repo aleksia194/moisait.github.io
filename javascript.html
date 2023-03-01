@@ -17,50 +17,23 @@
         <div class="shapka komshap"><a href="coments.html">комментарии</a></div>  
     </header>   
     <main>
-        <!-- <script type="text/javascript">
-            let a = 0;
-            for (let i = 5; i<=13; i++) {a += i};
+        <script type="text/javascript">
+            let a;
+            function diap(one, over) {
+                a = 0;
+                for (let i = one; i<=over; i++) {a += i;};
+                
+                return a;
+                a = 0;
+            };
+
             setTimeout(function(){
-            alert("7 задача " + a);}, 100);
-            
-            let b = 0;
-            for (let i = 7; i<=21; i++) {b += i};
-            setTimeout(function(){
-            alert("8 задача " + b);}, 101);
-
-            let c = 0;
-            for (let i = 10; i<=100; i++) {c += i};
-            setTimeout(function(){
-            alert("9 задача " + c);}, 102);
-
-            let d = 0;
-            for (let i = 1; i<=100; i++) {d += i};
-            setTimeout(function(){
-            alert("10 задача " + d);}, 103);
-
-
-            </script> -->
-
-            <script type="text/javascript">
-                let a;
-                function diap(one, over) {
-                    a = 0;
-                    for (let i = one; i<=over; i++) {a += i;};
-                    
-                    return a;
-                    a = 0;
-                };
-
-                setTimeout(function(){
-                alert("7 задача " + diap(5, 13));
-                alert("8 задача " + diap(7, 21));
-                alert("9 задача " + diap(10, 100));
-                alert("10 задача " + diap(1, 100));
-                }, 100)
-                </script>
-
-
-
+            alert("7 задача " + diap(5, 13));
+            alert("8 задача " + diap(7, 21));
+            alert("9 задача " + diap(10, 100));
+            alert("10 задача " + diap(1, 100));
+            }, 100)
+            </script>
     </main>
 </body>
 </html>
