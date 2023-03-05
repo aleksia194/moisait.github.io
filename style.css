@@ -148,3 +148,10 @@ main {
 .table_index{
     margin:5% 30%;
 }
+
+
+canvas {
+    background: #eee;
+    display: block;
+    margin: 20px auto 100px;
+}
