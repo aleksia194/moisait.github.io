@@ -1,0 +1,187 @@
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TG.gif" type="image/gif">
+    <link rel="shortcut icon" href="TG.gif" type="image/gif">
+
+    <title>школьный сайт</title>
+</head>
+<body id="bo">
+    <header> 
+        <a style="margin-right: 20%;" href="index.html"><img class="logo" src="TG.gif" alt="лого"></a>
+        <div class="shapka ceshap">школьный сайт</div>
+        <div class="shapka komshap"><a href="coments.html">комментарии</a></div>  
+    </header>   
+    <main>
+        <div class="block schet">Счет: </div>
+
+        <canvas id = "canv" height="400" width="720"></canvas>
+
+        <script type="text/javascript">
+            const canvas = document.getElementById("canv");
+            const ctx = canvas.getContext("2d");
+            const H = canvas.height;
+            const W = canvas.width;
+            const br = 10;
+            const padH = H/20;
+            const padW = W/6;
+            let padX = (W - padW) / 2;
+            let padY = H - padH;
+            let Mx = padX;
+            let My = padY;
+            let speed = 2;
+            let timeOut = 6;
+            let dx = speed;
+            let dy = -speed;
+
+            let score = 0;
+
+
+            const brickRowCount = 4;
+            const brickColumnCount = 8;
+            const brickPadding = 10;
+            const brickOffsetTop = 30;
+            const brickOffsetLeft = 30;
+            const brickWidth = ((W - brickOffsetLeft - brickPadding) / brickColumnCount) - (brickPadding);
+            const brickHeight = 20;
+
+            const bricks = [];
+
+            for (let c = 0; c < brickColumnCount; c++) {
+            bricks[c] = [];
+            for (let r = 0; r < brickRowCount; r++) {
+                bricks[c][r] = { x: 0, y: 0, status: 1 };
+            }
+            }
+            
+            
+
+
+            let x = W/2;
+            let y = H - H/5;
+
+
+            function drawBall() {
+                ctx.beginPath();
+                ctx.arc(x, y, br, 0, Math.PI*2);
+                ctx.fillStyle = " #ff0000";
+                ctx.fill();
+                ctx.closePath();
+            };
+
+            function drawPaddle() {
+                ctx.beginPath();
+                ctx.rect(padX, padY, padW, padH);
+                ctx.fillStyle = "#AF3BD4";
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            function drawBricks() {
+                for (let c = 0; c < brickColumnCount; c++) {
+                    for (let r = 0; r < brickRowCount; r++) {
+                        if (bricks[c][r].status === 1) {
+                        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+                        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        ctx.beginPath();
+                        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                        ctx.fillStyle = "#AF3BD4";
+                        ctx.fill();
+                        ctx.closePath();
+                        }
+                    }
+                }
+            }
+
+
+            function collisionDetection() {
+                for (let c = 0; c < brickColumnCount; c++) {
+                    for (let r = 0; r < brickRowCount; r++) {
+                        const b = bricks[c][r];
+                        if (b.status === 1) {
+                            if (
+                                x > b.x &&
+                                x < b.x + brickWidth &&
+                                y > b.y &&
+                                y < b.y + brickHeight
+                            ) {
+                                dy = -dy;
+                                b.status = 0;
+                                score += 100;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            function getMouse(){
+                canvas.mousemove(function(e){
+                    let target = this.getBoundingClientRect();
+                    Mx = e.clientX - target.left;
+                    // My = e.clientY - target.top;
+                });
+            }
+
+            canvas.onmousemove = function(event) {
+                e = event || window.event; // кроссбраузерность
+                Mx = event.offsetX - padW/2;
+            }
+
+            
+
+            function draw() {   
+                ctx.clearRect(0, 0, W, H);
+                drawPaddle()
+                drawBricks();
+                collisionDetection()
+                drawBall();
+                if (x + dx >= W || x + dx <= 0){
+                    dx = -dx
+                }
+                if (y + dy <= 0 || y + dy >= H){
+                    dy = -dy
+                }
+
+                if(y + dy < br) {
+                    dy = -dy;
+                }
+                else if(y + dy > H - br) {
+                    if(x > padX && x < padX + padW) {
+                        dy = -dy;
+                    }
+                    else {
+                        alert("GAME OVER");
+                        document.location.reload();
+                        clearInterval(interval); // Needed for Chrome to end game
+                    }
+                }
+
+                document.getElementsByClassName('schet')[0].innerText = score;
+
+
+                padX = Mx;
+                x += dx;
+                y += dy;
+            };   
+
+
+
+
+            const interval = setInterval(draw, timeOut);
+            
+           
+            
+        
+            
+
+        </script>
+    </main>
+</body>
+</html>
